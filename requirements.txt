@@ -1,0 +1,5 @@
+Django==4.2.7
+djangorestframework==3.14.0
+boto3==1.28.84
+mysqlclient==2.2.0
+python-dotenv==1.0.0
