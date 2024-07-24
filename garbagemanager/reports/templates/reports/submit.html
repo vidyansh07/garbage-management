@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Garbage Report</title>
+</head>
+<body>
+    <h1>Submit Garbage Report</h1>
+    <form action="{% url 'submit_report' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*" required>
+        <input type="number" name="latitude" step="any" required>
+        <input type="number" name="longitude" step="any" required>
+        <button type="submit">Submit Report</button>
+    </form>
+    {% block api %}
+    {% endblock %}
+</body>
+</html>
